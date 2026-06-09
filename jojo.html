@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JoJo打卡 | Italy Trip 2026</title>
+    <meta name="description" content="JoJo 的奇妙冒险打卡点，分行程内与行程外参考点展示。" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-page="jojo">
+    <div class="page-shell">
+      <header class="subhero">
+        <nav class="topbar" id="site-nav"></nav>
+        <div class="subhero-copy">
+          <p class="kicker">JoJo Spots</p>
+          <h1>JoJo的奇妙冒险打卡</h1>
+          <p class="hero-text">单独整理打卡点，并特别标出本次行程没有安排但仍在路线城市里的参考点。</p>
+        </div>
+      </header>
+      <main class="page-main">
+        <section class="section">
+          <div class="section-heading">
+            <p class="eyebrow">Map</p>
+            <h2>打卡总地图</h2>
+          </div>
+          <article class="card">
+            <div id="jojo-map" class="map map-large"></div>
+          </article>
+        </section>
+        <section class="section">
+          <div class="section-heading">
+            <p class="eyebrow">In Route</p>
+            <h2>行程内打卡点</h2>
+          </div>
+          <div id="jojo-included" class="tips-grid"></div>
+        </section>
+        <section class="section">
+          <div class="section-heading">
+            <p class="eyebrow">Optional</p>
+            <h2>行程外参考点</h2>
+          </div>
+          <div id="jojo-extra" class="tips-grid"></div>
+        </section>
+      </main>
+    </div>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="./trip-data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

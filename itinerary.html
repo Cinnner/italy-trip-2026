@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>每日行程 | Italy Trip 2026</title>
+    <meta name="description" content="按天查看意大利旅行行程，包含地图顺序、Google Maps 跳转与每日重点。" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-page="itinerary">
+    <div class="page-shell">
+      <header class="subhero">
+        <nav class="topbar" id="site-nav"></nav>
+        <div class="subhero-copy">
+          <p class="kicker">Day By Day</p>
+          <h1>每日行程</h1>
+          <p class="hero-text">每天都有单独卡片与地图，点位按顺序编号，适合边走边看。</p>
+        </div>
+      </header>
+      <main class="page-main">
+        <section class="section">
+          <div id="day-nav" class="day-nav"></div>
+          <div id="day-sections" class="day-sections"></div>
+        </section>
+      </main>
+    </div>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="./trip-data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

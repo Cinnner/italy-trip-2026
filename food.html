@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>餐饮指南 | Italy Trip 2026</title>
+    <meta name="description" content="罗马、佛罗伦萨、威尼斯的餐饮指南与用餐建议。" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-page="food">
+    <div class="page-shell">
+      <header class="subhero">
+        <nav class="topbar" id="site-nav"></nav>
+        <div class="subhero-copy">
+          <p class="kicker">Food Guide</p>
+          <h1>餐饮指南</h1>
+          <p class="hero-text">按城市整理特色菜、街头小食与用餐避坑建议。</p>
+        </div>
+      </header>
+      <main class="page-main">
+        <section class="section">
+          <div id="food-grid" class="tips-grid"></div>
+        </section>
+        <section class="section">
+          <div class="section-heading">
+            <p class="eyebrow">Advice</p>
+            <h2>用餐小建议</h2>
+          </div>
+          <div id="food-tips" class="card stack-list"></div>
+        </section>
+      </main>
+    </div>
+    <script src="./trip-data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

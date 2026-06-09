@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>路线总览 | Italy Trip 2026</title>
+    <meta name="description" content="意大利旅行路线总览、住宿、交通票据与预算参考。" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-page="overview">
+    <div class="page-shell">
+      <header class="subhero">
+        <nav class="topbar" id="site-nav"></nav>
+        <div class="subhero-copy">
+          <p class="kicker">Overview</p>
+          <h1>路线总览</h1>
+          <p class="hero-text">整条路线、住宿、交通票据与预算参考，适合作为出发前总检查页。</p>
+        </div>
+      </header>
+      <main class="page-main">
+        <section class="section">
+          <div class="overview-grid">
+            <article class="card">
+              <h3>行程节奏</h3>
+              <div id="route-overview" class="route-overview"></div>
+            </article>
+            <article class="card">
+              <h3>住宿</h3>
+              <div id="stays-list" class="stack-list"></div>
+            </article>
+            <article class="card">
+              <h3>已购交通</h3>
+              <div id="transport-list" class="stack-list"></div>
+            </article>
+          </div>
+        </section>
+        <section class="section">
+          <div class="section-heading">
+            <p class="eyebrow">Schedule</p>
+            <h2>日程总览</h2>
+          </div>
+          <div id="schedule-list" class="stack-list card"></div>
+        </section>
+        <section class="section">
+          <div class="section-heading">
+            <p class="eyebrow">Budget</p>
+            <h2>预算参考</h2>
+          </div>
+          <div id="budget-list" class="tips-grid"></div>
+        </section>
+      </main>
+    </div>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="./trip-data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

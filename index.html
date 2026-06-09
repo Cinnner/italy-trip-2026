@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Italy Trip 2026</title>
+    <meta
+      name="description"
+      content="2026 意大利个人旅行攻略网站，适合手机浏览，包含路线总览、每日行程、餐饮指南、安全提示、预订清单与 JoJo 打卡。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-page="home">
+    <div class="page-shell">
+      <header class="hero">
+        <nav class="topbar" id="site-nav"></nav>
+        <div class="hero-grid">
+          <section class="hero-copy">
+            <p class="kicker">2026.06.10 - 2026.06.16</p>
+            <h1>Italy Trip 2026</h1>
+            <p class="hero-text">
+              按天拆开的个人攻略站，优先适配手机浏览。地图支持页面内查看点位分布，并可一键跳转到
+              Google Maps 导航。
+            </p>
+            <div class="hero-actions" id="hero-actions"></div>
+          </section>
+          <aside class="hero-panel" id="summary-panel"></aside>
+        </div>
+      </header>
+
+      <main class="page-main">
+        <section class="section">
+          <div class="section-heading">
+            <p class="eyebrow">Quick Access</p>
+            <h2>主模块</h2>
+          </div>
+          <div class="module-grid" id="module-grid"></div>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <p class="eyebrow">At A Glance</p>
+            <h2>出发前先看这些</h2>
+          </div>
+          <div class="overview-grid">
+            <article class="card">
+              <h3>路线总览</h3>
+              <div id="route-overview" class="route-overview"></div>
+            </article>
+            <article class="card">
+              <h3>住宿与地图跳转</h3>
+              <div id="stays-list" class="stack-list"></div>
+            </article>
+            <article class="card">
+              <h3>预订状态摘要</h3>
+              <div id="booking-summary" class="stack-list"></div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="./trip-data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
