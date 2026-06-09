@@ -30,10 +30,16 @@ jobs:
         with:
           enablement: true
 
-      - name: Upload artifact
+      - name: Prepare static files
+        run: |
+          mkdir public
+          cp index.html overview.html itinerary.html food.html safety.html booking.html jojo.html public/
+          cp styles.css app.js trip-data.js .nojekyll public/
+
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: .
+          path: ./public
 
       - name: Deploy to GitHub Pages
         id: deployment
